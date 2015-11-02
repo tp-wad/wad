@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - WAD</title>
 
-    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="~/Scripts/farbtastic.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
-            $('#demo').hide();
-            $('#colorpicker').farbtastic('#color');
-        });
-    </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.js")"></script>
+    <link href="@Url.Content("~/Content/farbtastic.css")" rel="stylesheet" type="text/css" />
 
+    @RenderSection("JavaScript", required: false)    
+    @RenderSection("CSS", required: false)
+    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 

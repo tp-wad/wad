@@ -2,44 +2,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section JavaScript { 
+<script type="text/javascript" src="~/Scripts/farbtastic.js"></script>
+}
+
+@section CSS {
+    <link href="@Url.Content("~/Content/farbtastic.css")" rel="stylesheet" type="text/css" />    
+}
+
 @{
     ViewBag.Title = "Index";
 }
 
-<style>
-    .farbtastic {
-      position: relative;
-    }
-    .farbtastic * {
-      position: absolute;
-      cursor: crosshair;
-    }
-    .farbtastic, .farbtastic .wheel {
-      width: 195px;
-      height: 195px;
-    }
-    .farbtastic .color, .farbtastic .overlay {
-      top: 47px;
-      left: 47px;
-      width: 101px;
-      height: 101px;
-    }
-    .farbtastic .wheel {
-      background: url(~/Images/wheel.png) no-repeat;
-      width: 195px;
-      height: 195px;
-    }
-    .farbtastic .overlay {
-      background: url(~/Images/mask.png) no-repeat;
-    }
-    .farbtastic .marker {
-      width: 17px;
-      height: 17px;
-      margin: -8px 0 0 -8px;
-      overflow: hidden; 
-      background: url(~/Images/marker.png) no-repeat;
-    }
-</style>
+<script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+            $('#demo').hide();
+            $('#colorpicker').farbtastic('#color');
+        });
+</script>
 <h1 style="text-align:center">Color Wheel Page</h1>
 <div id="demo" style="color: red; font-size:1.4em; text-align:center;">JQuery not present</div>
 <form action="" style="text-align:center">

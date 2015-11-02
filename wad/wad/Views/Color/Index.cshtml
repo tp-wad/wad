@@ -2,17 +2,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script type="text/javascript">
+<script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
-        $('#colorpicker').farbtastic('#color');
-    })
+        $('#demo').hide();
+        $('#picker').farbtastic('#color');
+    });
 </script>
 
-<h1 style="text-align:center">Color Wheel Page</h1>
-<form style="text-align:center">
-    <input type="text" id="color" name="color" value="#123456" style="text-align:center" />
+<h1>Color Wheel Page</h1>
+<div id="demo" style="color: red; font-size: 1.4em">jQuery.js is not present. You must install jQuery in this folder for the demo to work.</div>
+<form action="" style="width: 400px;">
+    <div class="form-item"><label for="color">Color:</label><input type="text" id="color" name="color" value="#123456" /></div><div id="picker"></div>
 </form>
-<div id="colorpicker"></div>
 <hr />
 <div>
     <label for="test1"><input type="radio" checked="checked" name="testRadio" value="Test1" id="test1" />TestRadio1</label>

@@ -7,7 +7,10 @@
     <title>@ViewBag.Title - WAD</title>
     
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")    
+    @Scripts.Render("~/bundles/modernizr")  
+    @Scripts.Render("~/bundles/bootstrap") 
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/farbtastic")
 
 </head>
 <body>
@@ -36,10 +39,6 @@
         <footer>
             <p>&copy; @DateTime.Now.Year - WAD</p>
         </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/farbtastic")
+    </div>    
 </body>
 </html>

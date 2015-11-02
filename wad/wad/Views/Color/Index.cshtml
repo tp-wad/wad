@@ -2,29 +2,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section JavaScript { 
-<script type="text/javascript" src="~/Scripts/farbtastic.js"></script>
-}
-
-@section CSS {
-    <link href="@Url.Content("~/Content/farbtastic.css")" rel="stylesheet" type="text/css" />    
-}
-
-@{
-    ViewBag.Title = "Index";
-}
-
 <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
-            $('#demo').hide();
-            $('#colorpicker').farbtastic('#color');
-        });    
+    $(document).ready(function () {
+        $('#picker').farbtastic('#color');
+    });
 </script>
-<h1 style="text-align:center">Color Wheel Page</h1>
-<div id="demo" style="color: red; font-size:1.4em; text-align:center;">JQuery not present</div>
-<form action="" style="text-align:center">
-    <div class="form-item" style="text-align:center"><label for="color">Color:</label><input type="text" id="color" value="#123456" /></div><div id="picker"></div>
+
+<h1 id="title">Wheel of Colours</h1>
+<form id="colourDisplay">
+    <div class="form-item">
+        <label for="color">Colour:</label><input type="text" id="color" name="color" value="#ff0000" />
+    </div>
 </form>
+<div id="picker">
+</div>
 <hr />
 <div>
     <label for="test1"><input type="radio" checked="checked" name="testRadio" value="Test1" id="test1" />TestRadio1</label>

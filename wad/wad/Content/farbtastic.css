@@ -18,6 +18,7 @@
  */
 .farbtastic {
   position: relative;
+  margin: 0 auto;
 }
 .farbtastic * {
   position: absolute;
@@ -34,18 +35,19 @@
   height: 101px;
 }
 .farbtastic .wheel {
-  background: url(~/Images/wheel.png) no-repeat;
+  background: url(/Images/wheel.png) no-repeat;
   width: 195px;
   height: 195px;
 }
 .farbtastic .overlay {
-  background: url(~/Images/mask.png) no-repeat;
+  background: url(/Images/mask.png) no-repeat;
 }
 .farbtastic .marker {
   width: 17px;
   height: 17px;
   margin: -8px 0 0 -8px;
   overflow: hidden; 
-  background: url(~/Images/marker.png) no-repeat;
+  background: url(/Images/marker.png) no-repeat;
+
 }
 

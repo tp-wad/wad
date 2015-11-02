@@ -5,15 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - WAD</title>
-
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-2.1.4.js")"></script>
-    <link href="@Url.Content("~/Content/farbtastic.css")" rel="stylesheet" type="text/css" />
-
-    @RenderSection("JavaScript", required: false)    
-    @RenderSection("CSS", required: false)
     
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/modernizr")  
+    @Scripts.Render("~/bundles/bootstrap") 
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/farbtastic")
 
 </head>
 <body>
@@ -30,9 +27,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Color", "Index", "Color")</li>
+                    <li>@Html.ActionLink("Colour", "Index", "Color")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
@@ -42,9 +38,6 @@
         <footer>
             <p>&copy; @DateTime.Now.Year - WAD</p>
         </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    </div>    
 </body>
 </html>

@@ -7,9 +7,9 @@
     <title>@ViewBag.Title - WAD</title>
     
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")  
-    @Scripts.Render("~/bundles/bootstrap") 
+    @Scripts.Render("~/bundles/modernizr")      
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")    
     @Scripts.Render("~/bundles/farbtastic")
 
 </head>
@@ -26,17 +26,20 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Colour", "Index", "Color")</li>
+                    <li>@Html.ActionLink("About", "Index", "About")</li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="jumbotron">
+        <h1><b>W</b>ebsite <b>A</b>esthetic <b>D</b>esigner</h1>
+        <p class="lead">Everything looks better with <b>WAD!</b></p>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - WAD</p>
+            <p>&copy; @DateTime.Now.Year - Website Aesthetic Designer</p>
         </footer>
     </div>    
 </body>

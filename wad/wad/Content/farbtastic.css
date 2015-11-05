@@ -22,7 +22,6 @@
 }
 .farbtastic * {
   position: absolute;
-  cursor: crosshair;
 }
 .farbtastic, .farbtastic .wheel {
   width: 195px;

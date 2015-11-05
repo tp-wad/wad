@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace wad.Controllers
 {
-    public class ColorController : Controller
+    public class AboutController : Controller
     {
-        // GET: Color
+        // GET: About
         public ActionResult Index()
         {
             return View();

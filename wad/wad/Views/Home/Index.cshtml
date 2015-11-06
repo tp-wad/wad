@@ -2,25 +2,60 @@
     ViewBag.Title = "Home Page";
 }
 
+<!--The main script for the colour wheel-->
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
         $('#picker').farbtastic('#color');
     });
-</script>
-
-
+</script> 
 
 <h1 id="title">Wheel of Colours</h1>
+<!-- commenting out because this part gets broken with the next script
 <form id="colourDisplay">
     <div class="form-item">
         <label for="color">Colour:</label><input type="text" id="color" name="color" value="#ff0000" />
     </div>
 </form>
-<div id="picker">
+-->
+<div id="picker"></div>
+<div id="weight-options">
+    <label for="bold"><input type="checkbox" name="weight-options" id="boldBox" onclick="boldText(this, 'doc-title')" />&nbsp;Bold&nbsp;</label>
+    &nbsp;
+    <label for="italics"><input type="checkbox" name="weight-options" id="italicsBox" onclick="italicText(this, 'doc-title')" />&nbsp;Italics&nbsp;</label>
 </div>
 <hr />
 <div>
-    <label for="test1"><input type="radio" checked="checked" name="testRadio" value="Test1" id="test1" />TestRadio1</label>
-    <br />
-    <label for="test2"><input type="radio" name="testRadio" value="Test2" id="test2" />TestRadio2</label>
+     
+    <h1 id="doc-title">TITLE OF DOCUMENT</h1>
+    <p>This is where a paragraph will go</p>    
+
+    <!--Changes the colour of linkTo(function) on the fly when the colour wheel is manipulated.
+        Breaks the update value in the formfield.-->
+    <script>
+        var header = $.farbtastic("#picker").linkTo(onColorChange);
+        function onColorChange(color) {
+            $('#doc-title').css({ 'color': color });
+        };
+    </script> 
+    
+    <!--Functions for the checkboxes.
+        Bold/Normal
+        Italics/Normal--> 
+    <script>
+        function boldText(checkbox) {
+            if (boldBox.checked) {
+                document.getElementById("doc-title").style.fontWeight = "bold";
+            } else {
+                document.getElementById("doc-title").style.fontWeight = "normal";
+            }
+        };
+
+        function italicText(checkbox) {
+            if (italicsBox.checked) {
+                document.getElementById("doc-title").style.fontStyle = "italic";
+            } else {
+                document.getElementById("doc-title").style.fontStyle = "normal";
+            }
+        };
+    </script>
 </div>

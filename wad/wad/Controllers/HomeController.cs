@@ -11,6 +11,6 @@ namespace wad.Controllers
         public ActionResult Index()
         {
             return View();
-        }
+        }        
     }
 }

@@ -186,11 +186,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\marker.png" />
     <Content Include="Images\mask.png" />
+    <Content Include="Images\WADLogo.png" />
     <Content Include="Images\wheel.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\farbtastic.js" />
+    <Content Include="Scripts\hideJumbo.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

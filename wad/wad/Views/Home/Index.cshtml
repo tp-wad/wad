@@ -4,11 +4,11 @@
 }
 
 <div id="picker"></div>
+<div style="text-align: center">@Html.TextBoxFor(m => Model.colour, new { id = "picker_colour" })</div>
 <div id="weight-options">
-    <!--<label for="bold"><input type="checkbox" name="weight-options" id="boldBox" onclick="boldText(this, 'doc-title')" />&nbsp;Bold&nbsp;</label>-->
+    <!--Using helpers, created a link between the controller values and the check boxes-->
     @Html.CheckBoxFor(m => Model.bold, new { onclick = "boldText(this);", name = "weight-options", id = "boldBox" })<label for="bold">&nbsp;Bold&nbsp;</label>
     &nbsp;
-    <!--<input type="checkbox" name="weight-options" id="italicsBox" onclick="italicText(this, 'doc-title')" /> -->
     @Html.CheckBoxFor(m => Model.italic, new { onclick = "italicText(this);", name = "weight-options", id = "italicsBox" })<label for="italics">&nbsp;Italics&nbsp;</label>
 </div>
 <hr />

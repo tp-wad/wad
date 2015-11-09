@@ -352,7 +352,8 @@ $(document).ready(function () {
 
 //Dynamically gets the selected colour of the wheel. Changes styling of tags
 function onColorChange(color) {
-    $('#doc-title').css({ 'color': color });
+    $('#picker_colour').css({ 'background': color });
+    $('#picker_colour').val(color);
 };
 
 //Functions for the checkboxes.Bold/Normal,Italics/Normal

@@ -35,6 +35,12 @@ textarea {
     margin: 0 auto;
 }
 
+#picker_colour{
+    text-align: center;
+    width: 25%;
+    margin: 0 auto;
+}
+
 #title {
     text-align: center;
 }

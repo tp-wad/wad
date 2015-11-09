@@ -343,3 +343,31 @@ jQuery._farbtastic = function (container, callback) {
     fb.linkTo(callback);
   }
 }
+
+//The main script for the colour wheel
+$(document).ready(function () {
+    var f = $.farbtastic('#picker');
+    f.linkTo(onColorChange);
+});
+
+//Dynamically gets the selected colour of the wheel. Changes styling of tags
+function onColorChange(color) {
+    $('#doc-title').css({ 'color': color });
+};
+
+//Functions for the checkboxes.Bold/Normal,Italics/Normal
+function boldText(checkbox) {
+    if (boldBox.checked) {
+        document.getElementById("doc-title").style.fontWeight = "bold";
+    } else {
+        document.getElementById("doc-title").style.fontWeight = "normal";
+    }
+};
+
+function italicText(checkbox) {
+    if (italicsBox.checked) {
+        document.getElementById("doc-title").style.fontStyle = "italic";
+    } else {
+        document.getElementById("doc-title").style.fontStyle = "normal";
+    }
+};

@@ -38,3 +38,8 @@ textarea {
 #title {
     text-align: center;
 }
+
+#document-container {
+    overflow-y: auto;
+    height: 380px;
+}

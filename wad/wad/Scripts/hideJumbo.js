@@ -35,3 +35,12 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+/*
+$(function () {
+    $('#lol').change(function () {
+        // the value of the checkbox changed => refresh the page:
+        window.location.reload();
+    });
+});
+*/

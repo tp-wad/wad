@@ -12,8 +12,7 @@ namespace wad.Controllers
         public ActionResult Index()
         {
             DocumentModels model = new DocumentModels();
-            model.bold = false;
-            return View();
+            return View(model);
         }    
     }
 }

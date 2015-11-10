@@ -29,7 +29,11 @@ namespace wad
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/farbtastic.css"));
+                      "~/Content/farbtastic.css",
+                      "~/Content/docs.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/custom").Include(
+                     "~/Scripts/hideJumbo.js"));
         }
     }
 }

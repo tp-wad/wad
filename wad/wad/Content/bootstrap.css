@@ -314,8 +314,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
+  color: #FFFFFF;
+  background-color: #faa60a;
 }
 
 input,
@@ -1080,7 +1080,7 @@ pre code {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 970px;
+    max-width: 80%;
   }
   .col-md-1,
   .col-md-2,
@@ -1243,7 +1243,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1700px;
+    max-width: 80%;
   }
   .col-lg-1,
   .col-lg-2,
@@ -4193,9 +4193,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
+  background: url(../Images/WADLogo.png) no-repeat center;
+  background-size: contain;
+  width: 85px;
+  height: 50px;
 }
 
 .navbar-brand:hover,
@@ -4928,22 +4929,33 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
-  margin: auto;
   text-align: center;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 200;
-  line-height: 2.1428571435;
+  height: 100px;
   color: inherit;
   background-color: #eeeeee;
+  transition: top 0.2s ease-in-out;
+  position: relative;
+}
+
+.jumbo-up{
+    top: -100px !important; 
+}
+
+.jumbo-down{
+    top: 100px !important;
 }
 
 .jumbotron h1 {
   line-height: 1;
   color: inherit;
+  margin: 0;
 }
 
 .jumbotron p {
   line-height: 1.4;
+  margin: 0;
 }
 
 .container .jumbotron {
@@ -4952,15 +4964,16 @@ a.list-group-item.active > .badge,
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .container .jumbotron {
     padding-right: 60px;
     padding-left: 60px;
   }
   .jumbotron h1 {
-    font-size: 63px;
+    font-size: 50px;
+    margin: 0;
   }
 }
 

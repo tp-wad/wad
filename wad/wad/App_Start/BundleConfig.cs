@@ -31,6 +31,9 @@ namespace wad
                       "~/Content/site.css",
                       "~/Content/farbtastic.css",
                       "~/Content/docs.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/custom").Include(
+                     "~/Scripts/hideJumbo.js"));
         }
     }
 }

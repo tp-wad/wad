@@ -1,15 +1,14 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background: #aa8ad6;
+    background: #faa60a;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background: #383474;
-    color: #aa8ad6;
+    background: #1c1c1c;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -48,4 +47,5 @@ textarea {
 #document-container {
     overflow-y: auto;
     height: 380px;
+    background: white;
 }

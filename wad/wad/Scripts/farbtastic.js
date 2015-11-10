@@ -354,21 +354,26 @@ $(document).ready(function () {
 function onColorChange(color) {
     $('#picker_colour').css({ 'background': color });
     $('#picker_colour').val(color);
+    $('.header12').css({ 'color': color });
 };
 
 //Functions for the checkboxes.Bold/Normal,Italics/Normal
 function boldText(checkbox) {
     if (boldBox.checked) {
-        document.getElementById("doc-title").style.fontWeight = "bold";
+        //document.getElementByClass("nav12").style.fontWeight = "bold";
+        $('.nav12').css({ 'fontWeight': "bold" });
     } else {
-        document.getElementById("doc-title").style.fontWeight = "normal";
+        //.getElementByClass("nav12").style.fontWeight = "normal";
+        $('.nav12').css({ 'fontWeight': "normal" });
     }
 };
 
 function italicText(checkbox) {
     if (italicsBox.checked) {
-        document.getElementById("doc-title").style.fontStyle = "italic";
+        //document.getElementByClass("nav12").style.fontStyle = "italic";
+        $('.nav12').css({ 'fontStyle': "italic" });
     } else {
-        document.getElementById("doc-title").style.fontStyle = "normal";
+        //document.getElementByClass("nav12").style.fontStyle = "normal";
+        $('.nav12').css({ 'fontStyle': "normal" });
     }
 };

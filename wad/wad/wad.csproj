@@ -227,6 +227,8 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Home\Documents\Document1.cshtml" />
     <Content Include="Views\Home\Documents\Document1Style.cshtml" />
+    <Content Include="Views\Home\Documents\Document2.cshtml" />
+    <Content Include="Views\Home\Documents\Document2Style.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

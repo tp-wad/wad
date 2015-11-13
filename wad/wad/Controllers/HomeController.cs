@@ -14,6 +14,7 @@ namespace wad.Controllers
         public ActionResult Index()
         {
             DocumentModels model = new DocumentModels();
+
             return View(model);
         }
 
@@ -30,10 +31,9 @@ namespace wad.Controllers
                 byte[] binData = b.ReadBytes(Convert.ToInt32(file.InputStream.Length));
 
                 string result = System.Text.Encoding.UTF8.GetString(binData);
+                
                 System.IO.File.WriteAllText("~/Views/Home/Documents/Document2.cshtml", result);
                 
-                //var postedFile = Request.Files[file];
-                //postedFile.SaveAs(Server.MapPath("~/UploadedFiles/") + Path.GetFileName(postedFile.FileName));
             }
             // redirect back to the index action to show the form once again
             return RedirectToAction("Index");

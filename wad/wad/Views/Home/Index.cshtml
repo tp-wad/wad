@@ -3,9 +3,6 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<style type="text/css">
-   @Html.Action("GetHtmlPage", "Home", new { path = "~/Views/Home/Documents/Document1Style.cshtml" })
-</style>
 
 <div style="float: left">
     @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -26,6 +23,10 @@
     @Html.CheckBoxFor(m => Model.italic, new { onclick = "italicText(this);", name = "weight-options", id = "italicsBox" })<label for="italics">&nbsp;Italics&nbsp;</label>
 </div>
 <hr />
+<style type="text/css">
+   @Html.Action("GetHtmlPage", "Home", new { path = "~/Views/Home/Documents/Document2Style.cshtml" })
+</style>
+
 <div id="document-container">
-    @Html.Action("GetHtmlPage", "Home", new { path = "~/Views/Home/Documents/Document1.cshtml" })
+    @Html.Action("GetHtmlPage", "Home", new { path = "~/Views/Home/Documents/Document2.cshtml" })
 </div>

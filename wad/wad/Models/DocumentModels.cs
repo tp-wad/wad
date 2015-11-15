@@ -14,5 +14,6 @@ namespace wad.Models
         public bool italic { get; set; }
         //stores selected colour
         public Color colour { get; set; }
+
     }
 }

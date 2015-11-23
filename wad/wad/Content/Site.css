@@ -2,6 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background: #faa60a;
+    overflow: hidden;
 }
 
 /* Set padding to keep content from hitting the edges */

@@ -40,9 +40,11 @@ namespace wad.Controllers
         }
         
 
-        public ActionResult GetHtmlPage(string path)
+        public ActionResult GetHtmlPage(int num = 1)
         {
-            return new FilePathResult(path, "text/html");
+            string path = "~/Views/Home/Documents/Document" + num + ".cshtml";
+            return PartialView(path, this);
         }
+        
     }
 }

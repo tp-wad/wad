@@ -15,7 +15,8 @@
     }
 </div>
 <div id="picker"></div>
-<div style="text-align: center">@Html.TextBoxFor(m => Model.colour, new { id = "picker_colour" })</div>
+<!--<div style="text-align: center">@Html.TextBoxFor(m => Model.colour, new { id = "picker_colour", onclick = "colourText(this);" })</div>-->
+<div style="text-align: center"><button type="button" id="picker_colour" onclick="colourText(this);"></button> </div>
 <div id="weight-options">
     <!--Using helpers, created a link between the controller values and the check boxes-->
     @Html.CheckBoxFor(m => Model.bold, new { onclick = "boldText(this);", name = "weight-options", id = "boldBox" })<label for="bold">&nbsp;Bold&nbsp;</label>

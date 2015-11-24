@@ -354,7 +354,7 @@ $(document).ready(function () {
 function onColorChange(color) {
     $('#picker_colour').css({ 'background': color });
     $('#picker_colour').val(color);
-    window.getSelection().css({ 'color': color });
+    document.getElementById('#picker_colour').value = color;
 };
 
 //Functions for the checkboxes.Bold/Normal,Italics/Normal
@@ -377,3 +377,15 @@ function italicText(checkbox) {
         window.getSelection().css({ 'fontStyle': "normal" });
     }
 };
+
+function colourText(textbox) {
+    // get the selected range
+    var range = window.getSelection().getRangeAt(0);
+
+    // create a new DOM node and set it's style property to red 
+    var newNode = document.createElement('span');
+    newNode.style.color = textbox.value;
+
+    // surround the selection with the new span tag 
+    range.surroundContents(newNode);
+}

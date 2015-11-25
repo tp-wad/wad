@@ -354,26 +354,41 @@ $(document).ready(function () {
 function onColorChange(color) {
     $('#picker_colour').css({ 'background': color });
     $('#picker_colour').val(color);
-    window.getSelection().css({ 'color': color });
 };
 
 //Functions for the checkboxes.Bold/Normal,Italics/Normal
-function boldText(checkbox) {
-    if (boldBox.checked) {
-        //document.getElementByClass("nav12").style.fontWeight = "bold";
-        window.getSelection().css({ 'fontWeight': "bold" });
-    } else {
-        //.getElementByClass("nav12").style.fontWeight = "normal";
-        window.getSelection().css({ 'fontWeight': "normal" });
-    }
+function boldText(button) {
+    // get the selected range
+    var range = window.getSelection().getRangeAt(0);
+
+    // create a new DOM node and set it's style property to red 
+    var newNode = document.createElement('span');
+    newNode.style.fontWeight = "bold";
+
+    // surround the selection with the new span tag 
+    range.surroundContents(newNode);
 };
 
-function italicText(checkbox) {
-    if (italicsBox.checked) {
-        //document.getElementByClass("nav12").style.fontStyle = "italic";
-        window.getSelection().css({ 'fontStyle': "italic" });
-    } else {
-        //document.getElementByClass("nav12").style.fontStyle = "normal";
-        window.getSelection().css({ 'fontStyle': "normal" });
-    }
+function italicText(button) {
+    // get the selected range
+    var range = window.getSelection().getRangeAt(0);
+
+    // create a new DOM node and set it's style property to red 
+    var newNode = document.createElement('span');
+    newNode.style.fontStyle = "italic";
+
+    // surround the selection with the new span tag 
+    range.surroundContents(newNode);
 };
+
+function colourText(textbox) {
+    // get the selected range
+    var range = window.getSelection().getRangeAt(0);
+
+    // create a new DOM node and set it's style property to red 
+    var newNode = document.createElement('span');
+    newNode.style.color = textbox.value;
+
+    // surround the selection with the new span tag 
+    range.surroundContents(newNode);
+}

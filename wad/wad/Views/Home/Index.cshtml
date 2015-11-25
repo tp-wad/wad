@@ -15,15 +15,14 @@
     }
 </div>
 <div id="picker"></div>
-<div style="text-align: center">@Html.TextBoxFor(m => Model.colour, new { id = "picker_colour" })</div>
+<!--<div style="text-align: center">@Html.TextBoxFor(m => Model.colour, new { id = "picker_colour", onclick = "colourText(this);" })</div>-->
+<div style="text-align: center"><button type="button" id="picker_colour" onclick="colourText(this);">Apply to highlighted text</button></div>
 <div id="weight-options">
-    <!--Using helpers, created a link between the controller values and the check boxes-->
-    @Html.CheckBoxFor(m => Model.bold, new { onclick = "boldText(this);", name = "weight-options", id = "boldBox" })<label for="bold">&nbsp;Bold&nbsp;</label>
-    &nbsp;
-    @Html.CheckBoxFor(m => Model.italic, new { onclick = "italicText(this);", name = "weight-options", id = "italicsBox" })<label for="italics">&nbsp;Italics&nbsp;</label>
+    <button type="button" id="picker_colour" onclick="boldText(this);"><b>Bold</b> text</button>
+    <button type="button" id="picker_colour" onclick="italicText(this);"><i>Italicize</i> text</button>
 </div>
 <hr/>
-
+<div>
 @Ajax.ActionLink("Document1", // <-- Text to display
                  "GetHtmlPage",// <-- Action Method Name
                  new { num = 1 },
@@ -32,6 +31,10 @@
                      UpdateTargetId = "document-container", // <-- DOM element ID to update
                      InsertionMode = InsertionMode.Replace, // <-- Replace the content of DOM element
                      HttpMethod = "GET" // <-- HTTP method
+                 },
+                 new
+                 {
+                     @class = "docTabs"
                  })
 @Ajax.ActionLink("Document2",
                  "GetHtmlPage",
@@ -41,8 +44,12 @@
                      UpdateTargetId = "document-container", 
                      InsertionMode = InsertionMode.Replace, 
                      HttpMethod = "GET"
+                 },
+                 new
+                 {
+                     @class = "docTabs"
                  })
-
+</div>
 <div id="document-container">
     @{Html.RenderAction("GetHtmlPage"); }
 </div>

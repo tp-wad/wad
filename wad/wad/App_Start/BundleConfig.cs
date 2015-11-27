@@ -34,7 +34,8 @@ namespace wad
                       "~/Content/docs.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/custom").Include(
-                     "~/Scripts/hideJumbo.js"));
+                     "~/Scripts/hideJumbo.js",
+                     "~/Scripts/controlPanel.js"));
         }
     }
 }

@@ -31,16 +31,11 @@ textarea {
 }
 
 #picker {
-    width: 50%;
     margin: 0 auto;
+    text-align: right;
+    float: right;
 }
 
-#picker_colour{
-    text-align: center;
-    width: 25%;
-    height: 30px;
-    margin: 0 auto;
-}
 
 #title {
     text-align: center;
@@ -68,4 +63,52 @@ hr {
     margin-right: 1px;
     color: #fff;
     text-decoration: none;
+}
+
+#weight-options {
+    text-align: center;
+    float: left;
+    width: 200px;
+}
+
+#colourToText {
+    float: right;
+    display: inline-block;
+    position: relative;
+    height: 195px;
+}
+
+#colourToText label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    width: 38px;
+}
+
+#colourToText input {
+    display: inline-block;
+    float: left;
+    width: 175px;
+    height: 26px;
+}
+
+#colourToText button{
+    display: inline-block;
+    float: left;
+    margin: 1.2em 0;
+    color: #000;
+    background: #FFF;
+}
+
+#controlPanel {
+    display: inline-block;
+    width: 100%;
+}
+
+.rgb {
+    margin-top: 3px;
+    margin-bottom: 3px;
 }

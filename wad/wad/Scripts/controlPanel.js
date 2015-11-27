@@ -7,8 +7,8 @@ $(document).ready(function () {
 
 //Dynamically gets the selected colour of the wheel. Changes styling of tags
 function onColorChange(color) {
-    $('#picker_colour').css({ 'background': color });
-    $('#picker_colour').val(color);
+    var invertedColour = invertColor(color);
+    $('#apply_colour').css({ 'background': color , 'color': invertedColour });
 
     //Update the hex value on textbox
     $('#hex_val').val(color);
@@ -30,6 +30,18 @@ function hexToRgb(hex) {
         g: parseInt(result[2], 16),
         b: parseInt(result[3], 16)
     } : null;
+}
+
+//Function to invert a HEX colour. from StackOverflow.
+function invertColor(hexColor) {
+    var color = hexColor;
+    color = color.substring(1);           // remove #
+    color = parseInt(color, 16);          // convert to integer
+    color = 0xFFFFFF ^ color;             // invert three bytes
+    color = color.toString(16);           // convert to hex
+    color = ("000000" + color).slice(-6); // pad with leading zeros
+    color = "#" + color;                  // prepend #
+    return color;
 }
 
 //Functions for the checkboxes.Bold/Normal,Italics/Normal

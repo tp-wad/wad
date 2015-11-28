@@ -16,6 +16,11 @@ namespace wad.Controllers
             return View();
         }
 
+        public ActionResult Register()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Login()
         {

@@ -68,9 +68,9 @@ namespace wad.Controllers
 
         public ActionResult LoggedIn()
         {
-            if(Session["userId"] != null)
+            if (Session["userId"] != null)
             {
-                return View();
+                return RedirectToAction("Index", "Home");
             }
             else
             {

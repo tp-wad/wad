@@ -31,17 +31,17 @@
             </div>
         </div>
     </div>
-    <div style="width: auto; background-color: #728ea7;">
+    <div style="width: auto; text-align: right; background-color: #000000;">
         @if (Request.IsAuthenticated)
         {
             <strong>@Html.Encode(User.Identity.Name)</strong>
-            @Html.ActionLink("Sign Out", "Logout", "User")
+            @Html.ActionLink("Sign Out", "Logout", "Register")
         }
         else
         {
-            @Html.ActionLink("Register", "Register", "User")
+            @Html.ActionLink("Register", "Register", "Account")
             <span> | </span>
-            @Html.ActionLink("Sign In", "Login", "User")
+            @Html.ActionLink("Sign In", "Login", "Account")
         }
     </div> 
 

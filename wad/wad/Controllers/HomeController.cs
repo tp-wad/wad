@@ -17,7 +17,6 @@ namespace wad.Controllers
 
             return View(model);
         }
-
         
         [HttpPost]
         public ActionResult Index(HttpPostedFileBase file)
@@ -44,7 +43,6 @@ namespace wad.Controllers
         {
             string path = "~/Views/Home/Documents/Document" + num + ".cshtml";
             return PartialView(path, this);
-        }
-        
+        }       
     }
 }

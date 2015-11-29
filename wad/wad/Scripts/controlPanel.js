@@ -3,6 +3,7 @@
 $(document).ready(function () {
     var f = $.farbtastic('#picker');
     f.linkTo(onColorChange);
+    rangy.init();
 });
 
 //Dynamically gets the selected colour of the wheel. Changes styling of tags
@@ -46,39 +47,48 @@ function invertColor(hexColor) {
 
 //Functions for the checkboxes.Bold/Normal,Italics/Normal
 function boldText(button) {
-    // get the selected range
-    var range = window.getSelection().getRangeAt(0);
+    //create new class with arbitrary name
+    var randomCssClass = "temp_" + (+new Date());
 
-    // create a new DOM node and set it's style property to bold
-    var newNode = document.createElement('span');
-    newNode.style.fontWeight = "bold";
+    //Apply class as a span to selected text
+    boldApplier = rangy.createClassApplier(randomCssClass);
+    boldApplier.toggleSelection();
 
-    // surround the selection with the new span tag 
-    range.surroundContents(newNode);
+    //Change css of new span tag
+    $("." + randomCssClass).css({ "font-weight": "bold" }).removeClass(randomCssClass);
+
+    //un-highlight text to show changes
+    window.getSelection().removeAllRanges();
 };
 
 function italicText(button) {
-    // get the selected range
-    var range = window.getSelection().getRangeAt(0);
+    //create new class with arbitrary name
+    var randomCssClass = "temp_" + (+new Date());
 
-    // create a new DOM node and set it's style property to italic 
-    var newNode = document.createElement('span');
-    newNode.style.fontStyle = "italic";
+    //Apply class as a span to selected text
+    italicApplier = rangy.createClassApplier(randomCssClass);
+    italicApplier.toggleSelection();
 
-    // surround the selection with the new span tag 
-    range.surroundContents(newNode);
+    //Change css of new span tag, then remove the class so that style is inline
+    $("." + randomCssClass).css({ "font-style": "italic" }).removeClass(randomCssClass);
+
+    //un-highlight text to show changes
+    window.getSelection().removeAllRanges();
 };
 
 function colourText(textbox) {
-    // get the selected range
-    var range = window.getSelection().getRangeAt(0);
+    //create new class with arbitrary name
+    var randomCssClass = "temp_" + (+new Date());
 
-    // create a new DOM node and set it's style property to colour wheel's colour 
-    var newNode = document.createElement('span');
-    newNode.style.color = textbox.value;
+    //Apply class as a span to selected text
+    colourApplier = rangy.createClassApplier(randomCssClass);
+    colourApplier.toggleSelection();
 
-    // surround the selection with the new span tag 
-    range.surroundContents(newNode);
+    //Change css of new span tag
+    $("." + randomCssClass).css({ "color": textbox.value }).removeClass(randomCssClass);
+    
+    //un-highlight text to show changes
+    window.getSelection().removeAllRanges();
 }
 
 function changeFont() {

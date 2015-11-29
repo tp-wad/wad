@@ -12,6 +12,7 @@
     @Scripts.Render("~/bundles/bootstrap")    
     @Scripts.Render("~/bundles/farbtastic")
     @Scripts.Render("~/bundles/custom")
+    @Scripts.Render("~/bundles/jqueryval")
 
 </head>
 <body>
@@ -26,11 +27,21 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("About", "Index", "About")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li><strong>@Html.Encode(User.Identity.Name)</strong>
+                            @Html.ActionLink("Sign Out", "Logout", "Register")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                        <li>@Html.ActionLink("Sign In", "Login", "Account")</li>
+                    }
                 </ul>
             </div>
         </div>
-
     </div>
+    
 
     <!--
     <div class="jumbotron">

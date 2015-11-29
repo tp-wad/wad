@@ -247,6 +247,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\rangy-classapplier.js" />
+    <Content Include="Scripts\rangy-core.js" />
+    <Content Include="Scripts\rangy-highlighter.js" />
+    <Content Include="Scripts\rangy-selectionsaverestore.js" />
+    <Content Include="Scripts\rangy-serializer.js" />
+    <Content Include="Scripts\rangy-textrange.js" />
     <Content Include="Scripts\rangyinputs-jquery-src.js" />
     <Content Include="Scripts\rangyinputs-jquery.js" />
     <Content Include="Scripts\respond.js" />

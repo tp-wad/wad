@@ -42,10 +42,11 @@ textarea {
 }
 
 #document-container {
-    overflow-y: auto;
+    overflow-x: auto;
     height: 380px;
     background: white;
     clear: both;
+    border: solid .2em #faa60a;
 }
 
 hr {
@@ -67,8 +68,27 @@ hr {
 
 #weight-options {
     text-align: center;
-    float: left;
-    width: 200px;
+    width: auto;
+    height: 195px;
+    display: inline-block;
+    float: right;
+    padding: 0 2em 0 2em;
+}
+
+#weight-options button{
+    background: #FFF;
+    color: #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+#weight-options select{
+   background: #FFF;
+   color: #000;
+   width: 200px;
+   height: 2.3em;
+   margin: 2.6em 0 1.9em 0;
 }
 
 #colourToText {
@@ -76,6 +96,8 @@ hr {
     display: inline-block;
     position: relative;
     height: 195px;
+    padding: 0 2em 0 2em;
+    color: #000;
 }
 
 #colourToText label {
@@ -86,6 +108,7 @@ hr {
     margin-top: 5px;
     margin-bottom: 3px;
     width: 38px;
+    color: #FFF;
 }
 
 #colourToText input {
@@ -106,6 +129,9 @@ hr {
 #controlPanel {
     display: inline-block;
     width: 100%;
+    min-width: 950px;
+    padding-top: 2em;
+    padding-bottom: 1em;
 }
 
 .rgb {

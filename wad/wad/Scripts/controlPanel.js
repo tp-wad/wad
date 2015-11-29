@@ -80,3 +80,8 @@ function colourText(textbox) {
     // surround the selection with the new span tag 
     range.surroundContents(newNode);
 }
+
+function changeFont() {
+    var div = document.getElementById("document-container");
+    div.style.fontFamily = $("#font-select option:selected").text();
+}

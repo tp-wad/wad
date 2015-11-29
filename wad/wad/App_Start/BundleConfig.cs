@@ -10,7 +10,13 @@ namespace wad
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/rangyinputs-jquery-src.js"));
+                        "~/Scripts/rangyinputs-jquery-src.js",
+                        "~/Scripts/rangy-core.js",
+                        "~/Scripts/rangy-textrange.js",
+                        "~/Scripts/rangy-serializer.js",
+                        "~/Scripts/rangy-selectionsaverestore.js",
+                        "~/Scripts/rangy-highlighter.js",
+                        "~/Scripts/rangy-classapplier.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));

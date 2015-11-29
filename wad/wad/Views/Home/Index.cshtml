@@ -7,8 +7,18 @@
 
 <div id="controlPanel">
     <div id="weight-options">
-        <button type="button" onclick="boldText(this);"><b>Bold</b> text</button>
-        <button type="button" onclick="italicText(this);"><i>Italicize</i> text</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="boldText(this);"><b>Bold</b> text</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="italicText(this);"><i>Italicize</i> text</button>
+        <br />
+        <select id="font-select">
+            <option style="font-family: 'Times New Roman';">Times New Roman</option>
+            <option style="font-family: 'Georgia';">Georgia</optionstyle="font-family:>
+            <option style="font-family: 'Arial';" selected>Arial</option>
+            <option style="font-family: 'Tahoma';">Tahoma</option>
+            <option style="font-family: 'Courier New';">Courier New</option>
+        </select>
+        <br />
+        <button type="button" class="btn btn-primary btn-lg" onclick="changeFont();">Change Font</button>
     </div>
     <div id="colourToText">
         <label>R:&nbsp;</label> 
@@ -51,6 +61,20 @@
                  {
                      UpdateTargetId = "document-container", 
                      InsertionMode = InsertionMode.Replace, 
+                     HttpMethod = "GET"
+                 },
+                 new
+                 {
+                     @class = "docTabs"
+                 })
+
+@Ajax.ActionLink("Document3",
+                 "GetHtmlPage",
+                 new { num = 3 },
+                 new AjaxOptions
+                 {
+                     UpdateTargetId = "document-container",
+                     InsertionMode = InsertionMode.Replace,
                      HttpMethod = "GET"
                  },
                  new
